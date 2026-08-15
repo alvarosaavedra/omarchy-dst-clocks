@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "alvarosaavedra.dst-clocks",
+  "name": "DST Clocks",
+  "version": "1.1.0",
+  "author": "radbug",
+  "license": "MIT",
+  "description": "A row of fixed timezones on the bar — flag emoji + 24h time, always DST-correct. Click to add, remove, or re-badge clocks via the Omarchy menu.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "DST Clocks",
+    "description": "Fixed timezones (Santiago, Toronto, …) as flag emoji + 24h time",
+    "category": "Time",
+    "allowMultiple": false,
+    "defaults": {
+      "zones": [
+        { "flag": "🇨🇱", "tz": "America/Santiago" },
+        { "flag": "🇨🇦", "tz": "America/Toronto" }
+      ]
+    }
+  }
+}
