@@ -2,7 +2,7 @@
 
 An Omarchy bar widget that shows a row of fixed timezones — by default **Santiago, Chile** and **Toronto, Canada** — as emoji + 24h time, right next to the stock clock:
 
-![DST Clocks on the Omarchy bar](screenshot.png)
+![DST Clocks on the Omarchy bar](preview.png)
 
 ```
 🇨🇱 14:05 · 🇨🇦 12:05 · 🇯🇵 02:05
