@@ -23,14 +23,28 @@ BarWidget {
   // the older zone1Flag/zone1Tz/zone2Flag/zone2Tz keys are still read as a
   // fallback so a hand-written config keeps working until the first menu
   // edit, which writes the merged list back as `zones`.
-  readonly property var zones: {
-    var list = setting("zones", null)
-    if (Array.isArray(list) && list.length > 0) return list
-    return [
+  property var zones: []
+
+  // The bar host injects settings across a C++/JS boundary, and the injected
+  // array can fail Array.isArray while still behaving like one (it
+  // stringifies and .length works, but Array.isArray returns false). A JSON
+  // round-trip re-materializes it in this context so the test is reliable.
+  function recomputeZones() {
+    var raw = setting("zones", null)
+    if (raw !== null && raw !== undefined) {
+      var list = JSON.parse(JSON.stringify(raw))
+      if (Array.isArray(list) && list.length > 0) {
+        zones = list
+        return
+      }
+    }
+    zones = [
       { flag: String(setting("zone1Flag", "🇨🇱")), tz: String(setting("zone1Tz", "America/Santiago")) },
       { flag: String(setting("zone2Flag", "🇨🇦")), tz: String(setting("zone2Tz", "America/Toronto")) }
     ]
   }
+
+  onSettingsChanged: recomputeZones()
 
   // Last reading per zone, keyed by IANA name. Filled asynchronously by the
   // date process; a zone shows "--:--" until its first reading lands.
@@ -82,6 +96,7 @@ BarWidget {
   }
 
   Component.onCompleted: {
+    recomputeZones()
     ready = true
     refresh()
   }
