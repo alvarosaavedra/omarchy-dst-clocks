@@ -72,7 +72,7 @@ pick_emoji() {
     "🇦🇷 Argentina" "🇨🇴 Colombia" "🇵🇪 Peru" "🇬🇧 United Kingdom" "🇮🇪 Ireland" \
     "🇵🇹 Portugal" "🇪🇸 Spain" "🇫🇷 France" "🇩🇪 Germany" "🇮🇹 Italy" \
     "🇳🇱 Netherlands" "🇧🇪 Belgium" "🇨🇭 Switzerland" "🇸🇪 Sweden" "🇳🇴 Norway" \
-    "🇩🇰 Denmark" "🇫🇮 Finland" "🇵🇱 Poland" "🇺🇦 Ukraine" "🇹🇷 Türkiye" \
+    "🇩🇰 Denmark" "🇫🇮 Finland" "🇵🇱 Poland" "🇺🇦 Ukraine" "🇷🇺 Russia" "🇹🇷 Türkiye" \
     "🇮🇱 Israel" "🇦🇪 UAE" "🇮🇳 India" "🇯🇵 Japan" "🇰🇷 South Korea" \
     "🇨🇳 China" "🇹🇼 Taiwan" "🇭🇰 Hong Kong" "🇦🇺 Australia" "🇳🇿 New Zealand" \
     "🕐 Plain clock face" "✏️ Other — type or paste …" \
